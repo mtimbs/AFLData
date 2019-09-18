@@ -1,7 +1,7 @@
 from sklearn.model_selection import train_test_split
 
 from Models.knn import knn
-from Helpers.visualisations import  plot_confusion_matrix
+from Helpers.visualisations import plot_confusion_matrix
 from PreProcessing.load_data import all_data_without_contested_possession_breakdown
 
 
@@ -19,3 +19,6 @@ def knn_baseline():
 
     plot_confusion_matrix(y_test, predictions, 'KNN - No sampling, 10 Neighbours')
 
+
+if __name__ == "__main__":
+    knn_baseline()
